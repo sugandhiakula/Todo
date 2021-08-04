@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-Do, To-Done</title>
+        <link href="todo.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/Users/sugandhiakula/Documents/EDIO/TODO/css/all.css">
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="header"><h1 class="app-title"> Get Sh*t Done </h1></div>
+                <div class='list'>
+                    <ul class="todo-list js-todo-list" style='list-style-type: none'></ul>
+                    <div class="empty-st">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h2 class="empty-state__title">Add your first todo</h2>
+                        <p class="empty-state__description">Be productive!</p>
+                    </div>
+                </div>
+                <div class="input">
+                    <form class='js-form'>
+                        <input autofocus type="text" class="js-todo-input" 
+                        placeholder="What do you want to do?" aria-label="Enter an item">
+                    </form>
+                </div>
+                <div class="themes">
+                    <div class="theme1"> 
+                        <input type="checkbox" id="thm"/>
+                        <label for="thm" class="thm_lbl">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            
+        </main>
+
+        <script src="todo.js" type="text/javascript"></script>
+    </body>
+</html>
