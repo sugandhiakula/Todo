@@ -40,6 +40,8 @@ function renderTodo(todo){
     const list = document.querySelector('.todo-list.js-todo-list');
     const exist = document.querySelector(`[data-key='${todo.id}']`)
 
+   
+
     // If a todo is deleted, it is removed from the DOM
     if (todo.deleted) {
         exist.remove();
@@ -48,6 +50,7 @@ function renderTodo(todo){
 
     // If the item is checked, preparations are made for it to be striked off on the list
     const isChecked = todo.checked?'done':'';
+    console.log(isChecked);
 
     // New list element is created, and the pertinent attributes are set
     const item = document.createElement('li');
@@ -117,6 +120,7 @@ function toggleDone(key) {
     const ind = todo.findIndex(item => item.id === Number(key));
     console.log(ind);
     todo[ind].checked = !todo[ind].checked;
+    localStorage.setItem(todo[ind].id, JSON.stringify({text:todo[ind].text, checked:todo[ind].checked}));
     renderTodo(todo[ind]); 
 }
 
